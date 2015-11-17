@@ -47,7 +47,7 @@ public class JwtFilter extends GenericFilterBean {
             user.setType(User.TypeUser.valueOf((String)hs.get("type")));
 
             RestTemplate restTemplate = new RestTemplate();
-            UserActive userActive = restTemplate.getForObject("http://localhost:8081/isActive/"+user.getIdPerson(), UserActive.class);
+            UserActive userActive = restTemplate.getForObject("https://api-local.voy.com.br:8043/auth-service/isActive/"+user.getIdPerson(), UserActive.class);
             if(userActive.isActive){
                 request.setAttribute("loggedUser", user);
             }else{

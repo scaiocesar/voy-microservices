@@ -5,11 +5,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.embedded.FilterRegistrationBean;
 import org.springframework.boot.orm.jpa.EntityScan;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
 
 
 @EntityScan(value = {"com.alo.base.model","com.alo.producer.model","com.alo.table.model","com.alo.theater.model"})
 @SpringBootApplication
+@EnableEurekaClient
 public class EventManagerApplication {
 
     @Bean

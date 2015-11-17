@@ -77,6 +77,11 @@ public class UserControl {
 
 
 
+    @RequestMapping(value = "/info",method = RequestMethod.GET)
+    public String info() {
+        return "OK";
+    }
+
     @SuppressWarnings("unused")
     private static class UserLogin {
         public String name;

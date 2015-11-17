@@ -1,0 +1,15 @@
+server:
+  port: 8043
+  #ssl:
+  #      key-store: classpath:keystore/key.jks
+  #      key-store-password: OPA1cxa
+  #      keyStoreType: JKS
+     #   keyAlias: root
+  #      clientAuth: want
+  #      trust-store: classpath:keystore/key.jks
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8090/eureka/
+

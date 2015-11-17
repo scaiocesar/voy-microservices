@@ -44,4 +44,10 @@ public class EventController {
     }
 
 
+    @RequestMapping(value = "/info",method = RequestMethod.GET)
+    public String info() {
+        return "OK";
+    }
+
+
 }
